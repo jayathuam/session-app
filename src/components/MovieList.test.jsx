@@ -152,7 +152,7 @@ describe("Movie list components", () => {
     });
     const image = screen.getByAltText("Guardians of the Galaxy");
     expect(image).toHaveAttribute("src", placeholder);
-    const resultDiv = image.closest("div");
+    const resultDiv = image.closest("button");
     fireEvent.click(resultDiv);
     expect(mockProps.setSelectedMovie).toHaveBeenCalledTimes(1);
     expect(mockProps.setSelectedMovie).toHaveBeenCalledWith("tt2015381");

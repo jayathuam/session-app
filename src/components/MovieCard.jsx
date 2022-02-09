@@ -5,12 +5,13 @@ import styled from "@emotion/styled";
 import { colors, breakpoints } from "../theme";
 import placeholderImage from "../shared/img/placeholder.png";
 
-const MovieCardWrapper = styled.div`
-  width: 300px;
+const MovieCardWrapper = styled.button`
+  width: 100%;
   display: flex;
   gap: 15px;
   padding: 25px;
   align-items: center;
+  border: none;
   border-bottom: 1px solid ${colors.softText};
   background-color: ${({ selected }) =>
     selected ? colors.selectedBackground : "unset"};
@@ -28,12 +29,14 @@ const MovieCardWrapper = styled.div`
 
 const MovieTitle = styled.div`
   color: ${colors.textMain};
+  text-align: left;
 `;
 
 const MovieYear = styled.div`
   padding-top: 5px;
   font-size: 14px;
   color: ${colors.softText};
+  text-align: left;
 `;
 
 const MoviePoster = styled.img`
